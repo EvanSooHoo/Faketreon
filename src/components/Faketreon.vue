@@ -2,24 +2,21 @@
 
   
   <div class="faketreon">
-    <v-card
-    color="grey lighten-4"
-    flat
-    height="200px"
-    tile
-  >
-    <v-toolbar dense>
-      
+    
+    <v-app-bar
+      color="white"
+      dense
+      light
+    >
 
-      
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
+      <v-btn icon href="https://twitter.com/hashtag/faketreon?src=hash">
+        <v-icon>mdi-alpha-f-circle</v-icon>
       </v-btn>
 
       
-    </v-toolbar>
-  </v-card>
+    </v-app-bar>
+  
+
     
   </div>
 </template>
