@@ -1,11 +1,8 @@
 <template>
 
   <div id="app">
-    <div class="my-2">
-        <v-btn text small>Normal</v-btn>
-      </div>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Faketreon msg="Welcome to Your Vue.js App"/>
+    
+    <Faketreon msg=""/>
   </div>
 </template>
 

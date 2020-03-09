@@ -1,7 +1,26 @@
 <template>
+
+  
   <div class="faketreon">
-    <h1>{{ msg }}</h1>
-    Hello
+    <v-card
+    color="grey lighten-4"
+    flat
+    height="200px"
+    tile
+  >
+    <v-toolbar dense>
+      
+
+      
+
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
+      
+    </v-toolbar>
+  </v-card>
+    
   </div>
 </template>
 
