@@ -32,27 +32,93 @@
     </v-app-bar>
 
     <v-container fluid>
-    <v-row justify="space-around">
-      <v-col cols="12">
-        
-        <v-img src="https://i.picsum.photos/id/0/5616/3744.jpg" aspect-ratio="2.9"></v-img>
-        <v-card flat tile class="d-flex">
-          <v-row justify="space-around">
-              
-        </v-row>
-        
-        </v-card>
-      </v-col>
-      </v-row>
-      </v-container>
       <v-row justify="space-around">
         <v-col cols="12">
-        <v-avatar color="indigo" size="100">
-          <span class="white--text headline"><v-img src="https://i.picsum.photos/id/166/200/300.jpg" position='center'></v-img></span> 
-          <!--<span class="white--text headline">36</span>-->
-        </v-avatar>
+          
+          <v-img src="https://i.picsum.photos/id/0/5616/3744.jpg" aspect-ratio="2.9"></v-img>
+          <v-card flat tile class="d-flex">
+            <v-row justify="space-around">
+                
+          </v-row>
+          
+          </v-card>
         </v-col>
         </v-row>
+    </v-container>
+        <v-row justify="space-around">
+          <v-col cols="12">
+            <v-avatar color="indigo" size="100">
+              <span class="white--text headline"><v-img src="https://i.picsum.photos/id/166/200/300.jpg" position='center'></v-img></span> 
+              <!--<span class="white--text headline">36</span>-->
+            </v-avatar>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12">
+            <center><b>Evan</b></center>
+            <center>is creating blog posts, long Facebook statuses, and fake Patreon pages</center>
+            <br>
+            <br>
+            <h3>Select a membership level</h3>
+            <center></center>
+          </v-col>
+        </v-row>
+      <v-container class="grey lighten-5">
+        <v-row no-gutters>
+          <v-col order="last">
+            <v-card
+              class="pa-2"
+              outlined
+              tile
+            >
+              <h4>Thank you for your support!</h4>
+              <br>
+              <br>
+              <h1>
+                $1 per post 
+              </h1>
+                <div class="text-center">
+                  <v-btn rounded color="primary" dark>Donate</v-btn>
+                </div>
+            </v-card>
+          </v-col>
+          <v-col>
+            <v-card
+              class="pa-2"
+              outlined
+              tile
+            >
+              <h4>Thank you for even more support!</h4>
+              <br>
+              <br>
+              <h1>
+                $5 per post 
+              </h1>
+              <div class="text-center">
+                  <v-btn rounded color="primary" dark>Donate</v-btn>
+                </div>
+            </v-card>
+          </v-col>
+          <v-col order="first">
+            <v-card
+              class="pa-2"
+              outlined
+              tile
+            >
+              <h4>That's way too much what are you doing</h4>
+              <br>
+              <br>
+              <h1>
+                $20 per post 
+              </h1>
+              <div class="text-center">
+                <v-btn rounded color="primary" dark>Donate</v-btn>
+              </div>
+            </v-card>
+            
+          </v-col>
+        </v-row>
+  </v-container>
   </div>
 </template>
 
@@ -69,6 +135,10 @@ export default {
 <style scoped>
 h3 {
   margin: 40px 0 0;
+}
+
+h4 {
+  margin: 20px 0 0;
 }
 ul {
   list-style-type: none;
