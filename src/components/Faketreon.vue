@@ -8,16 +8,28 @@
       dense
       light
     >
-
       <v-btn icon href="https://twitter.com/hashtag/faketreon?src=hash">
         <v-icon>mdi-alpha-f-circle</v-icon>
       </v-btn>
 
-      
-    </v-app-bar>
-  
+      <v-spacer></v-spacer>
 
-    
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+      <v-form>
+        <v-container>
+            <v-row>
+              <v-col cols="12" sm="12">
+                    <v-text-field
+                >Search for a user</v-text-field>
+              </v-col>
+            </v-row>
+        </v-container>
+      </v-form>  
+      <v-btn text small>Create on Patreon</v-btn>
+      <v-btn text small>Log in</v-btn>
+    </v-app-bar>
   </div>
 </template>
 
