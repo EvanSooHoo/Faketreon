@@ -77,9 +77,25 @@
               <h1>
                 $1 per post 
               </h1>
+              <br>
+              
+              <v-dialog v-model="dialog" persistent max-width="600px">
                 <div class="text-center">
-                  <v-btn rounded color="primary" dark>Donate</v-btn>
-                </div>
+                  </div>
+                  <template v-slot:activator="{ on }">
+                    <v-btn rounded color="primary" v-on="on" dark>Donate</v-btn>
+                  </template>
+                  <v-card>
+                    <v-card-title class="headline">Use Google's location service?</v-card-title>
+                    <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn color="green darken-1" text @click="dialog = false">Disagree</v-btn>
+                      <v-btn color="green darken-1" text @click="dialog = false">Agree</v-btn>
+                    </v-card-actions>
+                  </v-card>
+                
+                </v-dialog>
             </v-card>
           </v-col>
           <v-col>
@@ -94,6 +110,7 @@
               <h1>
                 $5 per post 
               </h1>
+              <br>
               <div class="text-center">
                   <v-btn rounded color="primary" dark>Donate</v-btn>
                 </div>
@@ -111,6 +128,7 @@
               <h1>
                 $20 per post 
               </h1>
+              <br>
               <div class="text-center">
                 <v-btn rounded color="primary" dark>Donate</v-btn>
               </div>
@@ -124,6 +142,7 @@
 
 <script>
 export default {
+  dialog: true,
   name: 'Faketreon',
   props: {
     msg: String
