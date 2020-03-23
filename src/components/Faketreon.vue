@@ -77,25 +77,33 @@
               <h1>
                 $1 per post 
               </h1>
-              <br>
-              
-              <v-dialog v-model="dialog" persistent max-width="600px">
-                <div class="text-center">
-                  </div>
-                  <template v-slot:activator="{ on }">
-                    <v-btn rounded color="primary" v-on="on" dark>Donate</v-btn>
-                  </template>
-                  <v-card>
-                    <v-card-title class="headline">Use Google's location service?</v-card-title>
-                    <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
-                    <v-card-actions>
-                      <v-spacer></v-spacer>
-                      <v-btn color="green darken-1" text @click="dialog = false">Disagree</v-btn>
-                      <v-btn color="green darken-1" text @click="dialog = false">Agree</v-btn>
-                    </v-card-actions>
-                  </v-card>
+              <br>   
+              <div class="text-center">
+                <v-btn
+                  rounded
+                  color="primary"
+                  dark
+                  @click="snackbarOne = true"
+                >
+                  Donate
+                </v-btn>
+                <v-snackbar
+                  v-model="snackbarOne"
+                  :multi-line="multiLine"
+                >
+                  {{ calmText }}
+                  <v-btn
+                    color="green"
+                    text
+                    @click="snackbarOne = false"
+                  >
+                    Close
+                  </v-btn>
+                </v-snackbar>
+              </div>
+                  
                 
-                </v-dialog>
+
             </v-card>
           </v-col>
           <v-col>
@@ -112,8 +120,33 @@
               </h1>
               <br>
               <div class="text-center">
-                  <v-btn rounded color="primary" dark>Donate</v-btn>
-                </div>
+                <v-btn
+                  rounded
+                  color="primary"
+                  dark
+                  @click="snackbarTwo = true"
+                >
+                  Donate
+                </v-btn>
+                <v-snackbar
+                  v-model="snackbarTwo"
+                  :multi-line="multiLine"
+                >
+                  {{ weirdText }}
+                  <v-btn
+                    color="orange"
+                    text
+                    @click="snackbarTwo = false"
+                  >
+                    Close
+                  </v-btn>
+                </v-snackbar>
+              </div>
+                <ul>
+                  <li>Bullet point</li>
+                  <li>Bullet point</li>
+                  <li>Bullet point</li>
+                </ul>
             </v-card>
           </v-col>
           <v-col order="first">
@@ -130,8 +163,34 @@
               </h1>
               <br>
               <div class="text-center">
-                <v-btn rounded color="primary" dark>Donate</v-btn>
+                <v-btn
+                  rounded
+                  color="primary"
+                  dark
+                  @click="snackbarThree = true"
+                >
+                  Donate
+                </v-btn>
+                <v-snackbar
+                  v-model="snackbarThree"
+                  :multi-line="multiLine"
+                >
+                  {{ angryText }}
+                  <v-btn
+                    color="red"
+                    text
+                    @click="snackbarThree = false"
+                  >
+                    Close
+                  </v-btn>
+                </v-snackbar>
               </div>
+              <ul>
+                <li>Bullet point</li>
+                <li>Bullet point</li>
+                <li>Bullet point</li>
+              </ul>    
+              
             </v-card>
             
           </v-col>
@@ -142,7 +201,18 @@
 
 <script>
 export default {
-  dialog: true,
+  data () {
+      return {
+        dialog: false,
+        multiLine: false,
+      snackbarOne: false,
+      snackbarTwo: false,
+      snackbarThree: false,
+      calmText: 'You can\'t actually donate, but thank you!',
+      weirdText: 'You can\'t actually donate, and do you know how often I post?',
+      angryText: 'DONATING IS ACTUALLY IMPOSSIBLE',
+      }
+    },
   name: 'Faketreon',
   props: {
     msg: String
@@ -160,6 +230,18 @@ h4 {
   margin: 20px 0 0;
 }
 ul {
+  margin: 20px 0 0;
+  
+  padding: 0;
+  text-align: "left";
+}
+li {
+  margin: 0;
+  padding: 0;
+  text-align: "left";
+}
+/*
+ul {
   list-style-type: none;
   padding: 0;
 }
@@ -167,6 +249,7 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
+*/
 a {
   color: #42b983;
 }
