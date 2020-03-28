@@ -99,8 +99,18 @@
                   >
                     Close
                   </v-btn>
+                  
                 </v-snackbar>
+                
+                <v-card-title primary-title class="justify-left" >
+                  <ul>
+                    <li>No benefits</li>
+                    <li>No benefits</li>
+                    <li>No benefits</li>                      
+                  </ul>   
+                </v-card-title>     
               </div>
+              
                   
                 
 
@@ -141,12 +151,14 @@
                     Close
                   </v-btn>
                 </v-snackbar>
+                <v-card-title primary-title class="justify-left" >
+                  <ul>
+                    <li>Still no benefits</li> 
+                    <li>Still no benefits</li>     
+                    <li>Still no benefits</li>                
+                  </ul>   
+                </v-card-title>
               </div>
-                <ul>
-                  <li>Bullet point</li>
-                  <li>Bullet point</li>
-                  <li>Bullet point</li>
-                </ul>
             </v-card>
           </v-col>
           <v-col order="first">
@@ -184,13 +196,14 @@
                     Close
                   </v-btn>
                 </v-snackbar>
+                  <v-card-title primary-title class="justify-left" >
+                  <ul>
+                    <li>Even this gets no benefits</li>
+                    <li>Even this gets no benefits</li>
+                    <li>Even this gets no benefits</li>
+                  </ul>   
+                </v-card-title>
               </div>
-              <ul>
-                <li>Bullet point</li>
-                <li>Bullet point</li>
-                <li>Bullet point</li>
-              </ul>    
-              
             </v-card>
             
           </v-col>
@@ -205,12 +218,12 @@ export default {
       return {
         dialog: false,
         multiLine: false,
-      snackbarOne: false,
-      snackbarTwo: false,
-      snackbarThree: false,
-      calmText: 'You can\'t actually donate, but thank you!',
-      weirdText: 'You can\'t actually donate, and do you know how often I post?',
-      angryText: 'DONATING IS ACTUALLY IMPOSSIBLE',
+        snackbarOne: false,
+        snackbarTwo: false,
+        snackbarThree: false,
+        calmText: 'You can\'t actually donate, but thank you!',
+        weirdText: 'You can\'t actually donate, and I couldn\'t figure out how to use v-layout in this.  v-snackbar works fine for some reason, but not v-layout',
+        angryText: 'Donating is actually impossible, as this website has no server side, but thanks anyway!',
       }
     },
   name: 'Faketreon',
@@ -230,15 +243,14 @@ h4 {
   margin: 20px 0 0;
 }
 ul {
-  margin: 20px 0 0;
-  
-  padding: 0;
-  text-align: "left";
+
+   margin:0 0 1em 15px;
+  padding: 10;
+  text-align: "right";
 }
 li {
-  margin: 0;
   padding: 0;
-  text-align: "left";
+  text-align: "center";
 }
 /*
 ul {
